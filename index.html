@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+          /*  --orange:rgb(255, 0, 149);
+            --lime: rgb(0, 255, 255);*/
+
+            --orange:rgb(255, 51, 0);
+            --lime: rgb(208, 255, 0);
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(45deg, rgb(7, 0, 15)0%, rgb(0, 5, 34) 50%, rgb(0, 13, 17)100%) ;
+            display: flex;
+        }
+        div{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        div>p:nth-child(odd) {
+            align-self: flex-end;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--lime);
+            box-shadow: 0 0 0 5px rgb(56, 90, 0), 0 0 50px var(--lime),0 0 100px var(--lime);
+            animation: anime linear infinite;
+            animation-duration: calc(100s/ var(--i));
+        }
+        div> p:nth-child(even) {
+            align-self: flex-end;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--orange);
+            box-shadow: 0 0 0 5px rgb(99, 36, 0), 0 0 50px var(--orange), 0 0 100px var(--orange);
+            animation: animetion linear infinite;
+            animation-duration: calc(100s/ var(--i));
+        }
+        @keyframes anime {
+        
+            from{
+                right: 0;
+                transform: scale(0.1);
+                
+            }
+            to{
+                right: 100%;
+                transform: scale(1.1);
+                
+            }
+            
+        }
+        @keyframes animetion {
+            from{
+                right: 100%;
+                transform: scale(0.1);
+            }
+            to{
+                right: 0;
+                transform: scale(1.1);
+            }
+            
+        }   
+        @media screen and (max-width: 500px){
+            #vanish{
+                display: none;
+            }
+            .text{
+                text-align: center;
+            }
+        }
+        .text{
+            background: rgba(255, 255, 255, 0.103);
+            border: 4px solid var(--lime);
+            padding: 35px;
+            border-radius: 15pt;
+            font-size: 35px;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            top: 50%;
+            transform: translate(0, -50%);
+            text-align: center;
+            align-self: center;
+            width: auto;
+            color: var(--lime);
+            height: auto;
+            z-index: 2;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0), 0 0 50px rgb(255, 255, 255), 0 0 100px rgb(255, 255, 255);
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        .text::before{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            transform: translate(-35px, 0 );
+            background: rgba(255, 255, 255, 0.26);
+            border-radius: 15pt;
+            filter: blur(5px);
+            z-index: 2;
+        }
+        section span.change{
+            color: var(--orange);
+        }
+        .um,.dois{
+            font-size: 34px;
+        }
+        .third{
+            font-size: 22px;
+        }
+        hr{
+
+            height: 2px;
+            width: 100%;
+            border: 2px solid var(--orange);
+            align-self: center;
+            margin: 5px 0 5px 0;
+        }
+</style>
+</head>
+<body>
+    <div>
+        <section class="text">
+            <p class="um"><span class=" um">Kainan </span><span class="change dois"> Guerra  |</span> 
+            <span> Front</span><span class="change">-End</span> <span class="change">Developer</span></p>
+            <hr>
+            <p class="third"><span class="change"> Infinite </span>Random 
+                <span class="change"> Bubble</span>
+                <span>    Vacuum Space </span>
+                <span class="change"> Background</span></p>
+            
+            
+        </section>
+        <p style="--i:21"></p>
+        <p style="--i:13"></p>
+        <p style="--i:18"></p>
+        <p style="--i:24"></p>
+        <p style="--i:13"></p>
+        <p style="--i:25"></p>
+        <p style="--i:16"></p>
+        <p style="--i:19"></p>
+        <p style="--i:12"></p>
+        <p style="--i:18"></p>
+        <p style="--i:14"></p>
+        <p style="--i:13"></p>
+        <p id="vanish" style="--i:26"></p>
+        <p id="vanish" style="--i:18"></p>
+        <p id="vanish" style="--i:24"></p>
+        <p id="vanish" style="--i:13"></p>
+        <p id="vanish" style="--i:28"></p>
+        <p id="vanish" style="--i:11"></p>
+        <p id="vanish" style="--i:18"></p>
+        <p id="vanish" style="--i:9"></p>
+        <p id="vanish" style="--i:11"></p>
+        <p id="vanish" style="--i:17"></p>
+    </div>
+
+</body>
+</html>
+
